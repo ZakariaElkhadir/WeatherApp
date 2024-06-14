@@ -1,0 +1,156 @@
+/* colors 
+https://colorhunt.co/palette/3329413b3486864af9f8e559
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d7c9bc;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /**blur effect**/
+    /* From https://css.glass */
+/* From https://css.glass */
+/* From https://css.glass */
+background: #201658;
+
+
+}
+#logo, .logo_home{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    
+}
+.header img{
+    width: 40px;
+    height: 40px;
+
+
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px;
+    font-weight: 500;
+}
+.hero{
+    width: 100%;
+    height: 690px;
+    /*background-color: #191919;*/
+    background: rgb(2,0,36);
+background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(9,21,129,1) 39%, rgba(7,65,158,1) 53%, rgba(0,212,255,1) 100%);
+    /*background-image: url('/static/images/hero.png');*/
+    background-size: 100% 100%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    /*height: 100vh; This makes the container take up the full viewport height */
+
+}
+
+
+.hero h2{
+    font-size: 64px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: -50px;
+
+    
+}
+.hero button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #864AF9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+/**
+footer{
+    background-color: #5356FF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+**/
+footer{
+    background-color: #201658;
+    color: #F9E8C9;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+    background-color: #3B3486;
+}
+
+.hero button:active {
+    transform: scale(0.9);
+}
+#about-content{
+    background-color: #3B3486;
+    text-align: center;
+    color: white;
+}
+
+.container-input {
+    position: relative;
+  }
+  
+  .input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
