@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-from flask import current_app as app
-from flask import render_template
+from flask import Flask
 import requests
 
-from datetime import datetime
+
 
 def calvin_to_celsius(temp):
     """Converts temperature from
       Kelvin to Celsius."""
+    
     return temp - 273.15
+
 
 def get_weather():
     base_url = "https://api.openweathermap.org/data/2.5/weather?"
@@ -22,26 +23,16 @@ def get_weather():
     humidity = response['main']['humidity']
     description = response['weather'][0]['description']
     temp_c = calvin_to_celsius(temp)
+
     weather_data = {
-            'city': city,
-            'wind_speed': wind_speed,
-            'temperature': temp_c,
-            'humidity': humidity,
-            'description': description
-        }
+          'city': city,
+          'wind_speed': wind_speed,
+          'temperature': temp_c,
+          'humidity': humidity,
+          'description': description
+      }
 
     return weather_data
 
-@app.route('/')
-def index():
-    weather_data = get_weather()
-    return render_template('index.html', weather_data=weather_data)
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.context_processor
-def inject_now():
-    return {'now': datetime.utcnow()}
 
