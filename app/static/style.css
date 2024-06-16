@@ -116,14 +116,9 @@ footer{
 }
 
 .hero button:hover {
-    transform: scale(1.1);
     background-color: #3B3486;
 }
 
-.hero button:hover {
-    transform: scale(1.1);
-    background-color: #3B3486;
-}
 
 .hero button:active {
     transform: scale(0.9);
