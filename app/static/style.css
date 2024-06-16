@@ -40,9 +40,9 @@ background: #201658;
     display: flex;
     
 }
-.header img{
-    width: 40px;
-    height: 40px;
+.header .logo_image{
+    width: 38px;
+    height: 38px;
 
 
 }
@@ -120,6 +120,11 @@ footer{
     background-color: #3B3486;
 }
 
+.hero button:hover {
+    transform: scale(1.1);
+    background-color: #3B3486;
+}
+
 .hero button:active {
     transform: scale(0.9);
 }
@@ -143,14 +148,53 @@ footer{
     opacity: 0.8;
   }
   
-  .container-input svg {
+  .container-input svg{
     position: absolute;
     top: 50%;
     left: 10px;
     transform: translate(0, -50%);
   }
+ 
   
   .input:focus {
     opacity: 1;
     width: 250px;
   }
+  
+
+.hero button:active {
+    transform: scale(0.9);
+}
+#about-content{
+    background-color: #3B3486;
+    text-align: center;
+    color: white;
+}
+
+.container-input {
+    position: relative;
+  }
+  
+  .input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+ 
+  
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
+  
