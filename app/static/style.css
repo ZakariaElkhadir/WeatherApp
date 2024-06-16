@@ -120,9 +120,7 @@ footer{
 }
 
 
-.hero button:active {
-    transform: scale(0.9);
-}
+
 #about-content{
     background-color: #3B3486;
     text-align: center;
@@ -164,9 +162,7 @@ footer{
     width: 250px;
 }
 
-.hero button:active {
-    transform: scale(0.9);
-}
+
 
 #about-content {
     background-color: #3B3486;
