@@ -32,6 +32,7 @@
     <section class="hero">
         
         <h2>Welcome to <br/>Weather wave</h2>
+        <!-- this form will be used to get the city name from the user -->
 <form method="POST" action="/">
     <div class="container-input">
         <input type="text" name="city" class="input" required placeholder="Enter city name">
@@ -43,9 +44,30 @@
     </div>
 </form>
     </section>
-    <section class="grid">
-    
+    <center>
+
+    <section class="weather-grid">
+        <!-- this section will contain the weather data -->
+        <div class="cardContainer">
+            <div class="card">
+              <p class="city">{{ weather_data.city }}</p>
+              <p class="weather">{{ weather_data.description }}</p>
+              <!--image place-->
+              <p class="temp">{{ weather_data.temperature }}</p>
+              <div class="minmaxContainer">
+                <div class="min">
+                  <p class="minHeading">Min</p>
+                  <p class="minTemp">{{ weather_data.temp_min }}</p>
+                </div>
+                <div class="max">
+                  <p class="maxHeading">Max</p>
+                  <p class="maxTemp">{{ weather_data.temp_max }}</p>
+                </div>
+              </div>
+            </div>
+          </div>          
     </section>
+    </center>
     <footer>
         <p>&copy; {{ now.year }} Zakaria Elkhadir</p>
     </footer>

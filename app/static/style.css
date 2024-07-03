@@ -1,3 +1,4 @@
+@import url(grid.css);
 /* colors 
 https://colorhunt.co/palette/3329413b3486864af9f8e559
 */
@@ -12,7 +13,7 @@ body{
     font-family: "Rubik", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d7c9bc;
+    background-color: rgba(2,0,36,1);
 }
 .header{
     position: fixed;
