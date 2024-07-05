@@ -13,7 +13,8 @@ def calvin_to_celsius(temp):
 
 def get_weather(city):
     base_url = "https://api.openweathermap.org/data/2.5/weather?"
-    api_key = open(".api_key", "r").read()
+    with open(".api_key", "r") as f:
+        api_key = f.read()
     url = base_url + 'appid=' + api_key + '&q=' + city
     response = requests.get(url).json()
 
