@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Weave</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.png') }}" />
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- This code is part of the index.
  html file located at the specified file path.
   It represents the closing </head> tag. -->
@@ -23,6 +23,7 @@
             Weather Wave
         </span>
         </a>
+        
         <nav class="navbar">
             <a href="/">Home</a>
             <a href="about">About</a>
@@ -45,7 +46,7 @@
 </form>
 <section class="weather-grid">
     <!-- this section will contain the weather data -->
-    <div class="cardContainer ">
+    <div class="cardContainer hidden">
         <div class="card">
           <p class="city">{{ weather_data.city }}</p>
           <p class="weather">{{ weather_data.description }}</p>
