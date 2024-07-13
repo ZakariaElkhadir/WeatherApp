@@ -34,9 +34,9 @@
         
         <h2>Welcome to <br/>Weather wave</h2>
         <!-- this form will be used to get the city name from the user -->
-<form method="POST" action="/">
+<form method="POST" action="/" id="weather-form">
     <div class="container-input">
-        <input type="text" name="city" class="input" required placeholder="Enter city name">
+        <input id="city" type="text" name="city" class="input" required placeholder="Enter city name">
         <button type="submit">
             <svg fill="#000000" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
                 <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
@@ -46,20 +46,20 @@
 </form>
 <section class="weather-grid">
     <!-- this section will contain the weather data -->
-    <div class="cardContainer hidden">
+    <div class="cardContainer ">
         <div class="card">
-          <p class="city">{{ weather_data.city }}</p>
-          <p class="weather">{{ weather_data.description }}</p>
+          <p class="city"></p>
+          <p class="weather"></p>
           <!--image place-->
-          <p class="temp">{{ weather_data.temperature }}</p>
+          <p class="temp"></p>
           <div class="minmaxContainer">
             <div class="min">
               <p class="minHeading">Min</p>
-              <p class="minTemp">{{ weather_data.temp_min }}</p>
+              <p class="minTemp"></p>
             </div>
             <div class="max">
               <p class="maxHeading">Max</p>
-              <p class="maxTemp">{{ weather_data.temp_max }}</p>
+              <p class="maxTemp"></p>
             </div>
           </div>
         </div>
@@ -70,7 +70,6 @@
         <p>&copy; {{ now.year }} Zakaria Elkhadir</p>
     </footer>
     </footer>
-
 
 <script src="{{ url_for('static', filename='dynamic.js') }}"></script>
 
