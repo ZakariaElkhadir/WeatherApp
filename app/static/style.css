@@ -173,3 +173,6 @@ footer{
     text-align: center;
     color: white;
 }
+.welcome{
+    display: block;
+}

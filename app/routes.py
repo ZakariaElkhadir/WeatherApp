@@ -26,6 +26,7 @@ def get_weather(city):
     temp = response['main']['temp']
     humidity = response['main']['humidity']
     description = response['weather'][0]['description']
+    icon = response['weather'][0]['icon']
     temp_c = int(calvin_to_celsius(temp))
     temp_min = int(calvin_to_celsius(response['main']['temp_min']))
     temp_max = int(calvin_to_celsius(response['main']['temp_max']))
@@ -36,7 +37,8 @@ def get_weather(city):
             'humidity': humidity,
             'description': description,
             'temp_min': temp_min,
-            'temp_max': temp_max
+            'temp_max': temp_max,
+            'icon': icon
         }
 
     return weather_data

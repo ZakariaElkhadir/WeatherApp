@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('#weather-form').on('submit', function(event){
+        const cel = '°C';
         event.preventDefault();
         var city = $('#city').val();
         $.ajax({
@@ -12,11 +13,14 @@ $(document).ready(function(){
             } else {
                 $('.city').text(response.city);
                 $('.weather').text(response.description);
-                $('.temp').text(response.temperature);
-                $('.minTemp').text(response.temp_min);
-                $('.maxTemp').text(response.temp_max);
+                $('.temp').text(response.temperature + cel);
+                $('.minTemp').text(response.temp_min + cel);
+                $('.maxTemp').text(response.temp_max + cel);
                }
             }
         })
+        
+        $('.hidden').css('display', 'block');
+        $('.welcome').css('display', 'none');
     });
 });
