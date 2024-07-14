@@ -43,6 +43,35 @@ def get_weather(city):
 
     return weather_data
 
+def get_forecast(city):
+    base_url = "https://api.openweathermap.org/data/2.5/forecast?"
+    with open(".api_key", "r") as f:
+        api_key = f.read()
+    url = base_url + 'appid=' + api_key + '&q=' + city
+    response = requests.get(url).json()
+
+    if response.get('cod') != '200':
+        return None
+
+    forecast_data = []
+    for forecast in response['list']:
+        date_time = forecast['dt_txt']
+        temp = forecast['main']['temp']
+        temp_c = int(calvin_to_celsius(temp))
+        description = forecast['weather'][0]['description']
+        icon = forecast['weather'][0]['icon']
+        forecast_data.append({
+            'date_time': date_time,
+            'temperature': temp_c,
+            'description': description,
+            'icon': icon
+        })
+        if len(forecast_data) == 3:
+            break
+
+
+    return forecast_data
+
 
 @app.route('/')
 def index():
@@ -65,3 +94,4 @@ def about():
 @app.context_processor
 def inject_now():
     return {'now': datetime.utcnow()}
+
