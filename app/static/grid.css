@@ -1,10 +1,12 @@
 .nextDays-card {
   display: flex;
-  justify-content: space-between;
-  /* wave background
+  justify-content: space-around;
+  
   align-items: center;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%235000ca' fill-opacity='1' d='M0,64L48,90.7C96,117,192,171,288,192C384,213,480,203,576,165.3C672,128,768,64,864,64C960,64,1056,128,1152,133.3C1248,139,1344,85,1392,58.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-  */
+  
+  color: white;
+
   }
 .box{
 width: 240px;
@@ -125,4 +127,27 @@ font-weight: bold;
 
 .cardContainer:hover::before {
   transform: translate(-50px, 50px);
+}
+
+
+/*
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  width: 200px;
+  position: relative;
+}
+  */
+
+.card.green-glow {
+  border: 2px solid green;
+  box-shadow: 0 0 10px green;
+}
+
+.card.red-glow {
+  border: 2px solid red;
+  box-shadow: 0 0 10px red;
 }
