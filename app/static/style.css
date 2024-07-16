@@ -196,7 +196,7 @@ footer{
         font-size: 32px;
     }
     .hero button{
-        padding: 10px 15px;
+        
         font-size: 14px;
     }
     .hero{
@@ -207,5 +207,10 @@ footer{
     }
     .welcome{
         font-size: 5px;
+    }
+    .nextDays-card{
+        display: flex;
+        flex-direction: column;
+        gap: 20px
     }
 }
