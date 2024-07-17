@@ -62,7 +62,7 @@ document
 
         if (data.forecast && data.forecast.length > 0) {
           data.forecast.forEach((forecast) => {
-            const card = $('<div>').addClass('card');
+            const card = $('<div>').addClass('card-next');
 
             if (
               fluctuatingWeather.includes(forecast.description.toLowerCase())

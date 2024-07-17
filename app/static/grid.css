@@ -19,11 +19,12 @@
   align-items: center;
   color: white;
   opacity: 0;
+  background-color: #88D66C;
   animation: fadeIn 0.5s forwards;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23C8CFA0' fill-opacity='0.9' d='M0,64L60,90.7C120,117,240,171,360,202.7C480,235,600,245,720,213.3C840,181,960,107,1080,74.7C1200,43,1320,53,1380,58.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230ba0ee' fill-opacity='10' d='M0,32L48,42.7C96,53,192,75,288,117.3C384,160,480,224,576,224C672,224,768,160,864,149.3C960,139,1056,181,1152,176C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10px;
+  gap : 20px;
 }
 /*.box{
 width: 240px;
@@ -61,7 +62,7 @@ font-weight: bold;
   animation: fadeIn 0.5s forwards;
 }
 
-.card {
+.card{
   position: relative;
   width: 250px;
   height: 270px;
@@ -75,6 +76,22 @@ font-weight: bold;
   background-color: rgba(65, 65, 65, 0.308);
   border: 1px solid rgba(255, 255, 255, 0.089);
   cursor: pointer;
+}
+.card-next{
+  position: relative;
+  width: 250px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(65, 65, 65, 0.308);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  padding: 10px;
+  margin: 10px;
+  
 }
 
 .city {
@@ -187,15 +204,16 @@ font-weight: bold;
     box-shadow: 0 0 20px red;
 }
 }
-.card.green-glow {
+.card-next.green-glow {
   animation: flashGren 2s infinite;
 }
 
-.card.red-glow {
+.card-next.red-glow {
   animation: flashRed 2s infinite;
 }
 
-.card{
+.card-next{
+  
   background: rgba( 74, 74, 74, 0.25 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 20px );
