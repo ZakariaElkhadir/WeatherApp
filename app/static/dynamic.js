@@ -1,3 +1,8 @@
+/**
+ * Handles the form submission event and fetches weather data from the server.
+ *
+ * @param {Event} event - The form submission event.
+ */
 document
   .getElementById('weather-form')
   .addEventListener('submit', function (event) {

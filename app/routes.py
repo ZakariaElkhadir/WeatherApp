@@ -3,12 +3,24 @@ from flask import current_app as app
 from flask import jsonify, render_template, request
 import requests
 from datetime import datetime, timedelta
+"""This module contains the routes for the Weather App."""
+
 
 def calvin_to_celsius(temp):
     """Converts temperature from Kelvin to Celsius."""
     return temp - 273.15
 
+
 def get_weather(city):
+    """
+    Gets the current weather data for a city.
+
+    Parameters:
+        city (str): The name of the city.
+
+    Returns:
+            weather_data (dict): The current weather data for the city.
+    """
     base_url = "https://api.openweathermap.org/data/2.5/weather?"
     with open(".api_key", "r") as f:
         api_key = f.read()
@@ -39,7 +51,17 @@ def get_weather(city):
 
     return weather_data
 
+
 def get_forecast(city):
+    """
+    Gets the weather forecast for a city.
+
+    Parameters:
+        city (str): The name of the city.
+
+    Returns:
+        forecast_data (list): The weather forecast for the city.
+    """
     base_url = "https://api.openweathermap.org/data/2.5/forecast?"
     with open(".api_key", "r") as f:
         api_key = f.read()
@@ -76,12 +98,16 @@ def get_forecast(city):
 
     return forecast_data
 
+
 @app.route('/')
 def index():
+    """Renders the index page."""
     return render_template('index.html')
+
 
 @app.route('/weather', methods=['POST'])
 def weather():
+    """Gets the current weather data for a city."""
     city = request.form['city']
     weather_data = get_weather(city)
     forecast_data = get_forecast(city)
@@ -93,10 +119,14 @@ def weather():
         weather_data['forecast'] = forecast_data
     return jsonify(weather_data)
 
+
 @app.route('/about')
 def about():
+    """Renders the about page."""
     return render_template('about.html')
+
 
 @app.context_processor
 def inject_now():
+    """Injects the current time into all templates."""
     return {'now': datetime.utcnow()}

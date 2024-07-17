@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from app import create_app
+"""the run.py module runs the Weather App."""
 
 
 def run_weather_app():
