@@ -169,6 +169,7 @@ footer{
        padding-top: 7px;
         
     }
+    
     .logo_image {
         width: 20%; /* Adjust the width as needed */
     }
@@ -192,10 +193,11 @@ footer{
         font-size: 14px;
     }
     .hero{
-        height: 100vh;
+        height: 95vh;
     }
     .hero h2{
-        padding-top: 0;
+        padding-top: 0px;
+        margin-top: -80px;
     }
     .welcome{
         font-size: 5px;
@@ -205,4 +207,5 @@ footer{
         flex-direction: column;
         gap: 20px
     }
+    
 }
