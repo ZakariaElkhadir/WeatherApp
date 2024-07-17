@@ -19,7 +19,7 @@ body{
 }
 .header{
     background-color: #201658;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -33,6 +33,7 @@ body{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
+    
 }
 
 .logo_home{
@@ -70,6 +71,7 @@ body{
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
+    margin-top: calc(60px);
 }
 
 
