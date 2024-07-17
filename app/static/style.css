@@ -13,7 +13,10 @@ body{
     padding: 0;
     background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(9,21,129,1) 39%, rgba(7,65,158,1) 53%, rgba(0,212,255,1) 100%);
 }
-
+#logo{
+    padding: auto;
+    margin: auto;
+}
 .hidden {
     display: none;
 }
@@ -48,8 +51,8 @@ body{
     
 }
 .header .logo_image{
-    width: 38px;
-    height: 38px;
+    max-width: 100%; 
+    height: auto; 
 
 
 }
@@ -163,21 +166,20 @@ footer{
 }
 @media screen and (max-width: 768px){
     .logo_home{
-        width: 10px;
-        height: 25px;
-        margin-bottom: 15px;
+       padding-top: 7px;
         
+    }
+    .logo_image {
+        width: 20%; /* Adjust the width as needed */
     }
     #logo{
         font-size: 17px;
+
         
     }
     .header{
         font-size: 16px;
         padding: 5px;
-        
-        
-        
     }
     .navbar a{
         font-size: 16px;
