@@ -7,8 +7,50 @@
     <title>about</title>
 </head>
 <body>
-    <div id="about-content">
-        <h1>this is about</h1>
-    </div>
+    <header class="header">
+
+        <a href="/" class="logo_home">
+            <img class="logo_image" itemprop="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="weather app logo">
+
+        <span id="logo">
+            Weather Wave
+        </span>
+        </a>
+        
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="about">About</a>
+        </nav>
+    </header>
+    <section id="about">
+    <div class="about-container">
+        <div class="success">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              
+              <svg class="succes-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div class="success-prompt-wrap">
+              <p class="success-prompt-heading">Weather Wave
+              </p><div class="success-prompt-prompt">
+                <p>
+                    Weather Wave is a user-friendly weather application that delivers accurate weather information for any city around the globe. With just a few taps, users can access current weather conditions,
+                     temperature, and essential weather details. Whether you’re planning your day, week,
+                      or a vacation, Weather Wave makes it easy to stay informed.
+                       To enhance your experience, the app visually indicates stability in weather:
+                       if the forecast is consistent, the card rotates with a <span class="green">green border</span>; if there are fluctuations, it displays a <span class="red">red border</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+        <p>&copy; {{ now.year }} Zakaria Elkhadir</p>
+    </footer>
+
 </body>
 </html>

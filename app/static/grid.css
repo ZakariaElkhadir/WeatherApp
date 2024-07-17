@@ -26,17 +26,6 @@
   background-repeat: no-repeat;
   gap : 20px;
 }
-/*.box{
-width: 240px;
-height: 320px;
-background-color: lightblue;
-text-align: center;
-border: 2px solid darkblue;
-border-radius: 10px;
-font-size: 20px;
-font-weight: bold;
-}*/
-
 
 .cardContainer .icon{
   width: 80px;
@@ -168,17 +157,7 @@ font-weight: bold;
 }
 
 
-/*
-.card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-  width: 200px;
-  position: relative;
-}
-  */
+
 @keyframes flashGren {
 
   0%, 100% {
