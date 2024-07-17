@@ -21,5 +21,3 @@ def run_weather_app():
     app.run(debug=True)
 
 
-if __name__ == "__main__":
-    run_weather_app()
