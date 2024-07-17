@@ -193,7 +193,7 @@ footer{
         font-size: 14px;
     }
     .hero{
-        height: 90vh;
+        height: 92vh;
     }
     .hero h2, .weather-form{
         padding-top: 0px;
@@ -208,7 +208,7 @@ footer{
         gap: 20px;
     }
     footer{
-        position: fixed;
+        position: relative;
     }
     
 }
