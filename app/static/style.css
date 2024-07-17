@@ -208,7 +208,7 @@ footer{
         gap: 20px;
     }
     footer{
-        position: relative;
+        position: fixed;
     }
     
 }
