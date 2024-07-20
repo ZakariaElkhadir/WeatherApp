@@ -27,7 +27,7 @@ document
         $('.maxTemp').text(`${data.temp_max} °C`);
         $('.icon').attr(
           'src',
-          `http://openweathermap.org/img/w/${data.icon}.png`
+          `https://openweathermap.org/img/w/${data.icon}.png`
         );
 
         const forecastContainer = $('#forecast-cards');
@@ -82,7 +82,7 @@ document
                     <p class="date">${forecast.date}</p>
                     <p class="weather">${forecast.description}</p>
                     <p class="temp">${forecast.temperature} °C</p>
-                    <img src="http://openweathermap.org/img/w/${forecast.icon}.png" alt="weather icon">
+                    <img src="https://openweathermap.org/img/w/${forecast.icon}.png" alt="weather icon">
                 `);
             forecastContainer.append(card);
           });
