@@ -1,14 +1,12 @@
-
-```markdown
 # Weather Wave
 
 Welcome to **Weather Wave**, your go-to app for accurate and up-to-date weather forecasts. Our mission is to provide you with reliable weather information so you can plan your day with confidence. Whether you're preparing for a weekend getaway or just need to know if you need an umbrella today, Weather Wave has got you covered.
-if 
 
 ## Live Demo
 
 Check out the live demo of the website [here](https://weatherwave-uxyv.onrender.com/).
-**sometimes the page take 50s**
+**Note: Sometimes the page may take up to 50 seconds to load.**
+
 ## Features
 
 - **Current Weather**: Get the current weather information for any city.
@@ -25,13 +23,13 @@ Check out the live demo of the website [here](https://weatherwave-uxyv.onrender.
 ## Screenshots
 
 ![Home Page](project_screen/Screenshot1.png)
-![Home Page](project_screen/Screenshot2.png)
 *Home page showing current weather and 3-day forecast.*
+
 ![Weather Indicators](project_screen/Screenshot3.png)
 *Forecast cards with green and red flashing borders.*
-![About Page](project_screen/Screenshot4.png)
-*About Weather Wave*
 
+![About Page](project_screen/Screenshot4.png)
+*About Weather Wave.*
 
 ## Technologies Used
 
@@ -81,3 +79,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 
 - Thanks to [OpenWeatherMap](https://openweathermap.org/) for providing the weather data API.
+```
