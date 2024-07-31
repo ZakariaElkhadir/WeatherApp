@@ -21,7 +21,7 @@
   opacity: 0;
   background-color: #020024 ;
   animation: fadeIn 0.5s forwards;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23454ade' fill-opacity='10' d='M0,32L48,42.7C96,53,192,75,288,117.3C384,160,480,224,576,224C672,224,768,160,864,149.3C960,139,1056,181,1152,176C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url(/static/images/wave_image.svg);
   background-size: cover;
   background-repeat: no-repeat;
   gap : 20px;
