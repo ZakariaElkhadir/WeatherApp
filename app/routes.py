@@ -2,7 +2,7 @@
 from flask import current_app as app
 from flask import jsonify, render_template, request
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
 
 """This module contains the routes and
 utility functions for the Weather App."""
@@ -91,7 +91,7 @@ def get_forecast(city):
     forecast_data = []
     today = datetime.utcnow().date()
     processed_dates = set()
-
+    morning_time = time(9, 0)
     # Process the forecast data
     for forecast in response['list']:
         date_time = datetime.strptime(forecast['dt_txt'], '%Y-%m-%d %H:%M:%S')
@@ -99,22 +99,23 @@ def get_forecast(city):
         if date_time.date() <= today or date_time.date() in processed_dates:
             continue
 
-        temp = forecast['main']['temp']
-        temp_c = int(calvin_to_celsius(temp))
-        description = forecast['weather'][0]['description']
-        icon = forecast['weather'][0]['icon']
+        if date_time.time() == morning_time:
+            temp = forecast['main']['temp']
+            temp_c = int(calvin_to_celsius(temp))
+            description = forecast['weather'][0]['description']
+            icon = forecast['weather'][0]['icon']
 
-        forecast_data.append({
-            'date': date_time.date().strftime('%Y-%m-%d'),
-            'temperature': temp_c,
-            'description': description,
-            'icon': icon
-        })
-        processed_dates.add(date_time.date())
+            forecast_data.append({
+                'date': date_time.date().strftime('%Y-%m-%d'),
+                'temperature': temp_c,
+                'description': description,
+                'icon': icon
+            })
+            processed_dates.add(date_time.date())
 
-        # Limit the forecast to 3 days
-        if len(processed_dates) == 3:
-            break
+            # Limit the forecast to 3 days
+            if len(processed_dates) == 3:
+                break
 
     return forecast_data
 
