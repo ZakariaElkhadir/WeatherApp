@@ -212,3 +212,30 @@ footer{
     }
     
 }
+#suggestionList {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0 0 0; /* Slight margin at the top to separate from the input */
+    position: absolute;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    /* Same border style as input */
+    border-radius: 5px; /* Rounded corners to match the input style */
+    background-color: white;
+    z-index: 1000;
+    opacity: 0.9; /* Slight opacity to match the input's style */
+}
+
+#suggestionList li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#suggestionList li:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+}
+.container-input {
+    position: relative;
+}

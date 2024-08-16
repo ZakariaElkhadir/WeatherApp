@@ -34,16 +34,18 @@
         
         <span class="welcome"><h2>Welcome to <br/>Weather wave</h2></span>
         <!-- this form will be used to get the city name from the user -->
-<form method="POST" action="/" id="weather-form">
-    <div class="container-input">
-        <input id="city" type="text" name="city" class="input" required placeholder="Enter city name">
-        <button type="submit">
-            <svg fill="#000000" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
-            </svg>
-        </button>
-    </div>
-</form>
+        <form method="POST" action="/" id="weather-form">
+            <div class="container-input" data-cities="Casablanca, Rabat, Marrakech, Fes, Tangier, Agadir, Meknes, Oujda, Salé, Kenitra, Tetouan, Laayoune, El Jadida, Essaouira, Chefchaouen, Asilah, Ifrane">
+                <input id="city" type="text" name="city" class="input" required placeholder="Enter city name" oninput="suggestCities()">
+                <ul id="suggestionList"></ul>
+                <button type="submit">
+                    <svg fill="#000000" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+        
 <section class="weather-grid hidden">
     <!-- this section will contain the weather data of the first day  -->
     <div class="cardContainer ">

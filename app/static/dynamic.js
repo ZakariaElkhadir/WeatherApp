@@ -3,6 +3,33 @@
  *
  * @param {Event} event - The form submission event.
  */
+function suggestCities() {
+  const input = document.getElementById("city").value.toLowerCase();
+  const suggestionList = document.getElementById("suggestionList");
+  
+  // Clear previous suggestions
+  suggestionList.innerHTML = '';
+
+  if (input.length === 0) return;
+
+  // Retrieve cities from the data attribute
+  const cities = document.querySelector('.container-input').dataset.cities.split(',');
+
+  // Filter cities based on input
+  const filteredCities = cities.filter(city => city.toLowerCase().includes(input));
+  
+  // Create and append list items for suggestions
+  filteredCities.forEach(city => {
+      const listItem = document.createElement("li");
+      listItem.textContent = city;
+      listItem.addEventListener("click", () => {
+          document.getElementById("city").value = city;
+          suggestionList.innerHTML = '';
+      });
+      suggestionList.appendChild(listItem);
+  });
+}
+
 document
   .getElementById('weather-form')
   .addEventListener('submit', function (event) {
