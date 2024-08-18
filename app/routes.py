@@ -2,7 +2,7 @@
 from flask import current_app as app
 from flask import jsonify, render_template, request
 import requests
-from datetime import datetime, timedelta, time
+from datetime import datetime, time
 
 """This module contains the routes and
 utility functions for the Weather App."""
