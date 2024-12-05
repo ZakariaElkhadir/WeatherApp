@@ -163,6 +163,7 @@ footer{
 
 .welcome{
     display: block;
+    margin-top: -200px;
 }
 @media screen and (max-width: 768px){
     .logo_home{
